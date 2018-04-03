@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Resources03</string>
+    <string name="message">Calculator</string>
+    <string name="m2">Finished</string>
+</resources>
