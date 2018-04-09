@@ -1,6 +1,7 @@
 package com.example.palmdigital.chooseyourownadventure_01;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button wButton;
     Button eButton;
+    MediaPlayer ring;
 
 
     @Override
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         wButton = findViewById(R.id.wButton);
         eButton = findViewById(R.id.eButton);
+
+         ring = MediaPlayer.create(MainActivity.this,R.raw.harp);
 
         wButton.setOnClickListener(this);
         eButton.setOnClickListener(this);
@@ -35,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             Intent b = new Intent(this, Main3Activity.class);
             startActivity(b);
+            ring.start();
         }
     }
 }
