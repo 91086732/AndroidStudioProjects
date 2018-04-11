@@ -13,6 +13,7 @@ public class Main5Activity extends AppCompatActivity implements View.OnClickList
     Button hButton;
     Button Bbutton;
     MediaPlayer punch;
+    MediaPlayer whoosh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +23,9 @@ public class Main5Activity extends AppCompatActivity implements View.OnClickList
         yButton = findViewById(R.id.yButton);
         hButton = findViewById(R.id.hButton);
         Bbutton = findViewById(R.id.b_Back3);
+
         punch = MediaPlayer.create(Main5Activity.this,R.raw.punch);
+        whoosh = MediaPlayer.create(Main5Activity.this, R.raw.whoosh);
 
         yButton.setOnClickListener(this);
         hButton.setOnClickListener(this);
@@ -47,6 +50,7 @@ public class Main5Activity extends AppCompatActivity implements View.OnClickList
         {
             Intent back2 = new Intent(this, Main3Activity.class );
             startActivity(back2);
+            whoosh.start();
         }
 
     }

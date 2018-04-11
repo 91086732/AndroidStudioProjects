@@ -14,6 +14,7 @@ public class Main4Activity extends AppCompatActivity implements View.OnClickList
     Button BButton;
     MediaPlayer scream;
     MediaPlayer faint;
+    MediaPlayer whoosh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +24,10 @@ public class Main4Activity extends AppCompatActivity implements View.OnClickList
         sButton = findViewById(R.id.sButton);
         fButton = findViewById(R.id.fButton);
         BButton = findViewById(R.id.b_Back2);
+
         scream = MediaPlayer.create(Main4Activity.this, R.raw.scream);
         faint = MediaPlayer.create(Main4Activity.this, R.raw.faint);
+        whoosh = MediaPlayer.create(Main4Activity.this, R.raw.whoosh);
 
         sButton.setOnClickListener(this);
         fButton.setOnClickListener(this);
@@ -49,6 +52,7 @@ public class Main4Activity extends AppCompatActivity implements View.OnClickList
         {
             Intent back1 = new Intent(this, Main3Activity.class );
             startActivity(back1);
+            whoosh.start();
         }
     }
 }

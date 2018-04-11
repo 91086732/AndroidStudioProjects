@@ -14,6 +14,7 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
     Button BButton;
     MediaPlayer back;
     MediaPlayer toilet;
+    MediaPlayer whoosh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
 
         back = MediaPlayer.create(Main3Activity.this, R.raw.backyard);
         toilet = MediaPlayer.create(Main3Activity.this, R.raw.toilet);
+        whoosh = MediaPlayer.create(Main3Activity.this, R.raw.whoosh);
 
         bButton.setOnClickListener(this);
         tButton.setOnClickListener(this);
@@ -49,6 +51,7 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
         {
             Intent back = new Intent(this, MainActivity.class );
             startActivity(back);
+            whoosh.start();
         }
     }
 }
